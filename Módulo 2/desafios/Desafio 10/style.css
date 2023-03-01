@@ -8,9 +8,11 @@
 body{
     font-size: 16px;
     margin: 0px;
+
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #47df8b;
+    background-color: #e5e5bc;
 }
+
 header{
     background-image: linear-gradient(#37C677, #336633);
     margin: 0px;
@@ -41,8 +43,15 @@ header>nav>a:hover{
     color:#336633;
     border-radius: 5px;
 }
+
+
+
 main{
     background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.281);
+    padding-bottom: 40px;
+    border-radius: 10px;
 }
 main>h2{
     font-family: idroid, sans-serif;
@@ -71,6 +80,9 @@ main>p>a{
 main>p>a::after{
     content: " 🔗";
 }
+main>p>a:hover{
+    text-decoration: underline;
+}
 main>p>span{
     color: #336633;
     font-weight: bold;
@@ -80,25 +92,65 @@ main > picture > img{
     width: -webkit-fill-available;
 }
 main>section{
+    margin-top: 20px;
     padding: 5px 20px;
     background-color: #336633;
 }
 main>section>iframe{
     margin: 20px;
     width: -webkit-fill-available;
-    
 }
-footer{
-    background-color: #336633;
 
+main>article{
+    margin: 30px 20px 20px 20px;
+    padding: 0px 0px 10px 0px;
+    background-color: #44e78d2c;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.226);
+}
+main>article>div{
+    margin: 0px;
+    padding: 10px;
+    background-color: #37C677;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+main>article>p{
+    text-indent: 40px;
+    padding: 5px 8px;
+}
+main>article>ul>li::before{
+    font-weight: bold;
+    content: "✓  ";
+}
+main>article>p>a{
+    color: #336633;
+    padding: 1px 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+main>article>p>a::after{
+    content: " 🔗";
+}
+main>article>p>a:hover{
+    text-decoration: underline;
+}
+main>article>p>span{
+    color: #336633;
+    font-weight: bold;
+}
+
+footer{
+    margin: 0px;
+    background-color: #336633;
+    padding: 4px;
 }
 footer>small{
     margin: 0px;
-    padding: 4px;
     color: white;
-    display: block;
 }
 footer>small>span{
-    
+    margin: 0px;
     font-weight: bold;
 }
