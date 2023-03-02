@@ -23,7 +23,7 @@ body{
     font-size: 1em;
     margin: 0px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte0);
     background-color: #e5e5bc;
 }
 
@@ -35,26 +35,34 @@ header{
 }
 header>h1{
     font-family: var(--fonte1);
+    font-size: 3em;
+    font-weight: lighter;
     color: white;
     margin: 0px;
-    padding: 20px;
+    padding: 40px 0px 20px 0px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
 }
 header>p{
     color: white;
+    font-size: 1.2em;
+    margin: 0px;
+    padding: 0px 80px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
 }
-header>nav{
+nav{
+    background-color: var(--cor5);
+    margin: 0px 0px -30px 0px;
     padding: 8px 20px;
     text-align: left;
 }
-header>nav>a{
+nav>a{
     font-size: 0.9em;
+    margin: 0px;
     padding: 0px 6px;
     color: var(--cor1);
     text-decoration: none;
 }
-header>nav>a:hover{
+nav>a:hover{
     padding: 5px 6px;
     background-color: var(--cor3);
     color:var(--cor4);
