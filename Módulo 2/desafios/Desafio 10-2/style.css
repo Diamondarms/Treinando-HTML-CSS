@@ -38,40 +38,43 @@ header{
     padding: 0px;
     text-align: center;
 }
-header>h1{
+header h1{
     font-family: var(--fonte1);
     font-size: 3em;
+    line-height: 1em;
     font-weight: lighter;
     color: white;
     margin: 0px;
-    padding: 40px 0px 20px 0px;
+    padding: 40px 20px 20px 20px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
 }
-header>p{
+header p{
     color: white;
     font-size: 1.2em;
     margin: 0px;
-    padding: 0px 80px;
+    padding: 0px 80px 30px 80px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
 }
 nav{
     background-color: var(--cor5);
     padding: 8px 20px;
     text-align: left;
+    box-shadow: 0px 7px 9px #00000044;
 }
-nav>a{
+nav a{
     font-size: 0.9em;
     margin: 0px;
     padding: 0px 6px;
+    font-weight: bold;
     color: var(--cor1);
     text-decoration: none;
+    transition-duration: 0.2s;
 }
-nav>a:hover{
+nav a:hover{
     padding: 5px 6px;
-    background-color: var(--cor3);
+    background-color: var(--cor2);
     color:var(--cor4);
     border-radius: 5px;
-    
 }
 
 main{
@@ -112,18 +115,22 @@ main a{
 main a::after{
     content: " 🔗";
 }
-main>article>p>a:hover{
+main a:hover{
     text-decoration: underline;
 }
-main>article>p>strong{
+main strong{
     color: var(--cor4);
 }
 main img{
-    margin: 20px;
-    width: 100%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 90%;
 }
 main img.pequena{
-    width: 350px;
+    width: 50%;
+    min-width: 300px;
     display: block;
     margin: auto;
 }
@@ -151,12 +158,6 @@ main h3{
     color: white;
     border-radius: 10px 10px 0px 0px;
 }
-main p{
-    text-indent: 40px;
-    font-size: 1em;
-    padding: 5px 8px;
-    text-align: justify;
-}
 main ul{
     columns: 2;
     padding: 30px 2px;
@@ -168,7 +169,6 @@ main li::before{
     font-weight: bold;
     content: "✓  ";
 }
-
 main strong{
     color: var(--cor4);
 }
@@ -177,13 +177,13 @@ footer{
     background-color: var(--cor4);
     padding: 4px;
 }
-footer>small{
+footer small{
     display: block;
     margin: auto;
     color: white;
     text-align: center;
 }
-footer>small>a{
+footer a{
     color: white;
     font-weight: bold;
 }
