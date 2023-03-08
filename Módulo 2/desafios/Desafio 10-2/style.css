@@ -143,11 +143,15 @@ main section{
     margin-top: 20px;
     padding: 5px 20px;
     background-color: var(--cor4);
-    
+    padding-bottom: 55.5%;
+    position: relative;
 }
 main iframe{
-    margin: 20px;
-    width: -webkit-fill-available;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 
 aside{
