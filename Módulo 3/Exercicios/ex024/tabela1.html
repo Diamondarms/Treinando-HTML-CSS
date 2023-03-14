@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            margin: 10px;
+            border-collapse: collapse;
+            width: 200px;
+            height: 200px;
+        }
+        tr#B{
+            background-color: burlywood;
+        }
+        td.c{
+            vertical-align: bottom;
+            border: 2px solid blue;
+        }
+        td{
+            text-align: center;
+            padding: 5px;
+            border: 1px solid black;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>A1</td>
+            <td class="c">A2</td>
+            <td>A3</td>
+        </tr>
+        <tr id="B">
+            <td class="c">B1</td>
+            <td>B2</td>
+            <td>B3</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td class="c">C2</td>
+            <td>C3</td>
+        </tr>
+    </table>
+</body>
+</html>
