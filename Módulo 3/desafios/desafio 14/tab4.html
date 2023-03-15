@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            /*width: 500px;*/
+            height: 300px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;}
+        input:focus, textarea:focus, select:focus{
+        outline: none;
+        }
+        input {
+            border-style: hidden;
+            width: 60px;
+            margin: -6px;
+            padding: 6px;
+            text-align: center;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 6px;
+        }
+        thead>tr, tr.Média{
+            background-color: rgb(70, 70, 70);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
+                <td>Matemática</td>
+                <td><input type="number" name="e1" onchange="c('e1')"></td>
+                <td><input type="number" name="e1" onchange="c('e1')"></td>
+                <td id="e1">0</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td><input type="number" name="e2" onchange="c('e2')"></td>
+                <td><input type="number" name="e2" onchange="c('e2')"></td>
+                <td id="e2">0</td>
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td><input type="number" name="e3" onchange="c('e3')"></td>
+                <td><input type="number" name="e3" onchange="c('e3')"></td>
+                <td id="e3">0</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td><input type="number" name="e4" onchange="c('e4')"></td>
+                <td><input type="number" name="e4" onchange="c('e4')"></td>
+                <td id="e4">0</td>
+            </tr>
+            <tr class="Média">
+                <th colspan="4" scope="row">Média de Exatas</th>
+                <td id="me">0</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
+                <td>História</td>
+                <td><input type="number" name="h1" onchange="c('h1')"></td>
+                <td><input type="number" name="h1" onchange="c('h1')"></td>
+                <td id="h1">0</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td><input type="number" name="h2" onchange="c('h2')"></td>
+                <td><input type="number" name="h2" onchange="c('h2')"></td>
+                <td id="h2">0</td>
+            </tr>
+            <tr class="Média">
+                <th colspan="4" scope="row">Média de Humanas</th>
+                <td id="mh">0</td>
+            </tr>
+        </tbody>
+        <script>
+            function c(d){
+                Calc(d)
+            }
+
+            function Calc(n=''){
+                s=0;
+                document.getElementsByName(n).forEach(q => s+=Number(q.value)/document.getElementsByName(n).length)
+                document.getElementById(n).innerText = s
+
+                CalcMedia(n)
+            }
+
+            function CalcMedia(n=''){
+                s=0
+                for(f=1;document.getElementById(n[0]+f)!=null;f++){
+                    s+=Number(document.getElementById(n[0]+f).innerText)
+                }
+                document.getElementById('m'+n[0]).innerText = s/(f-1)
+            }
+        </script>
+    </table>
+</body>
+</html>
