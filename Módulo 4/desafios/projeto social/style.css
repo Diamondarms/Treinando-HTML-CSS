@@ -50,6 +50,14 @@ a>img{
     box-sizing: border-box;
     transition: all 0.2s;
 }
+ul>li>img{
+    width: 56px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.384);
+    filter: grayscale(100%) brightness(50%) blur(1px);
+    margin: 8px;
+    box-sizing: border-box;
+}
 a>img:hover{
     width: 60px;
     margin-bottom: 4px;
