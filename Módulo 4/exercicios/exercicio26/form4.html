@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="#">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="radSex" id="radMasc" checked value="M"><label for="radMasc">Masculino</label><br>
+            <input type="radio" name="radSex" id="radFemi"><label for="radFemi" value="F">Feminino</label><br>
+            <input type="radio" name="radSex" id="radOut" value="O"><label for="radOut">Outro</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="espFut" id="espFut">
+            <label for="espFut">Futebol</label><br>
+            <input type="checkbox" name="espBas" id="espBas" checked>
+            <label for="espBas">Basquete</label><br>
+            <input type="checkbox" name="espNat" id="espNat">
+            <label for="espNat">Natação</label><br>
+            <input type="checkbox" name="espTen" id="espTen">
+            <label for="espTen">Tênis</label><br>
+        </fieldset>
+        <fieldset>
+            <label for="color">Cor:</label>
+            <input type="color" name="color" id="color" value="#dd3300">
+            <br>
+            <label for="nvSatisf">Nível de Satisfação</label>
+            <input type="range" name="nvSatisf" id="nvSatisf" min="0" max="1024" value="5" onchange="c()"> <span id="nvSat"></span>
+            <br>
+            <label for="file">Foto:</label>
+            <input type="file" name="file" id="file">
+        </fieldset>
+        <br>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+
+    <script>
+        function c(){
+            var nv = document.getElementById('nvSat')
+            var nvRang = document.getElementById('nvSatisf')
+
+            nv.innerHTML = nvRang.value
+        }
+    </script>
+</body>
+</html>
