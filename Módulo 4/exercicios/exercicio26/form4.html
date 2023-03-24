@@ -31,14 +31,58 @@
             <input type="color" name="color" id="color" value="#dd3300">
             <br>
             <label for="nvSatisf">Nível de Satisfação</label>
-            <input type="range" name="nvSatisf" id="nvSatisf" min="0" max="1024" value="5" onchange="c()"> <span id="nvSat"></span>
+            <input type="range" name="nvSatisf" id="nvSatisf" min="0" max="1024" value="5" oninput="c()"> <span id="nvSat">0</span>
             <br>
             <label for="file">Foto:</label>
             <input type="file" name="file" id="file">
         </fieldset>
         <br>
         <div>
+            <label for="est">Estado</label>
+            <select name="estados" id="est">
+
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Centro">
+                    <option value="GO">Goiás</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Mato Grosso</option>
+                </optgroup>
+
+                <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="SC" >Santa Catarina</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="profissao">Profissão:</label>
+            <input type="text" name="profissao" id="profissao" list="proflist">
+            <datalist id="proflist">
+                <option>Professor</option>
+                <option>Administrador</option>
+                <option>Gari</option>
+                <option>Engenheiro civil</option>
+            </datalist>
+        </div>
+        <br>
+        <div>
+            <label for="msg">Mensagem:</label> <br>
+            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <label>Soma de números:</label><br>
+            <input type="number" name="num1" id="num1" oninput="soma.innerHTML = Number(num1.value) + Number(num2.value) + Number(nvSatisf.value)" style="width: 40px;"> +
+            <input type="number" name="num2" id="num2" oninput="soma.innerHTML = Number(num1.value) + Number(num2.value)" style="width: 40px;">
+            <br><br>
+            <label for="soma">Soma:</label>
+            <output name="soma" id="soma"></output>
+        </div>
+        <br>
+        <div>
             <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
         </div>
     </form>
 
@@ -48,6 +92,13 @@
             var nvRang = document.getElementById('nvSatisf')
 
             nv.innerHTML = nvRang.value
+        }
+
+        function som(){
+            var n1 = document.getElementById('num1')
+            var n2 = document.getElementById('num2')
+            var s = Number(n1.value) + Number(n2.value)
+            document.getElementById('soma').innerHTML = s
         }
     </script>
 </body>
